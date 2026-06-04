@@ -498,9 +498,9 @@
       </div>
     </section><!-- Projects Page -->
     <section id="page-projects" class="page min-h-full pt-24 pb-16 px-6">
-      <div class="max-w-6xl mx-auto py-12">
+      <div class="max-w-4xl mx-auto py-12">
 
-        <!-- Header — ไม่ centered ให้รู้สึก editorial -->
+        <!-- Header -->
         <div class="mb-16">
           <p class="mono text-slate-500 text-xs tracking-[0.3em] uppercase mb-3">things i've built</p>
           <h2 class="text-5xl lg:text-6xl font-bold leading-none">
@@ -509,101 +509,89 @@
           </h2>
         </div>
 
-        <!-- Featured project — full width, text overlay -->
-        <div class="group relative rounded-2xl overflow-hidden mb-6 cursor-pointer" style="height: 420px;">
-          <img src="img/project_borrow.png" alt="UniEquip Borrow" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
-          <div class="absolute inset-0 p-10 flex flex-col justify-end">
-            <div class="transform transition-transform duration-300 group-hover:-translate-y-2">
-              <p class="mono text-purple-400 text-xs tracking-widest mb-2">01 — React · Node.js · QR</p>
-              <h3 class="text-3xl font-bold text-white mb-3">UniEquip Borrow</h3>
-              <p class="text-slate-300 text-sm max-w-md leading-relaxed mb-5">ระบบยืม-คืนอุปกรณ์มหาวิทยาลัย ให้นักศึกษา scan QR จองและรับของได้เลย ไม่ต้องผ่านเจ้าหน้าที่</p>
-              <div class="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span class="text-xs text-slate-400 mono">↗ ดูโปรเจกต์</span>
+        <!-- Sudoku Daily — single project, full detail -->
+        <a href="https://sirisakunknowss.github.io/mini-games/" target="_blank" rel="noopener" class="block group">
+
+          <!-- Browser mockup frame -->
+          <div class="rounded-2xl overflow-hidden border border-slate-700/60 group-hover:border-purple-500/40 transition-colors duration-500 bg-slate-900/60">
+
+            <!-- Fake browser bar -->
+            <div class="flex items-center gap-2 px-4 py-3 bg-slate-800/80 border-b border-slate-700/50">
+              <span class="w-3 h-3 rounded-full bg-red-500/60"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500/60"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500/60"></span>
+              <div class="ml-3 flex-1 bg-slate-700/60 rounded px-3 py-1 mono text-xs text-slate-400 truncate">
+                sirisakunknowss.github.io/mini-games/
+              </div>
+              <span class="mono text-xs text-purple-400 group-hover:text-purple-300 transition-colors">↗ open</span>
+            </div>
+
+            <!-- Screenshot area — gradient placeholder เพราะไม่มีรูป -->
+            <div class="relative overflow-hidden" style="height: 340px; background: linear-gradient(135deg, #0a0118 0%, #12052a 40%, #0d0a1f 100%);">
+
+              <!-- Sudoku grid visual -->
+              <div class="absolute inset-0 flex items-center justify-center opacity-20">
+                <div class="grid grid-cols-9 gap-px" style="width: 280px; height: 280px;">
+                  <script>
+                    // ไม่ใช้ script inline — ใช้ CSS grid แทน
+                  </script>
+                </div>
+              </div>
+
+              <!-- Centered content overlay -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+                <div class="text-6xl mb-4">🧩</div>
+                <p class="mono text-purple-300 text-sm tracking-widest mb-2">SUDOKU DAILY</p>
+                <p class="text-slate-400 text-sm">เปิดเล่นได้เลย — คลิกที่ card นี้</p>
+              </div>
+
+              <!-- Number grid decoration -->
+              <div class="absolute inset-0 pointer-events-none" style="background-image: repeating-linear-gradient(0deg, rgba(168,85,247,0.03) 0px, rgba(168,85,247,0.03) 1px, transparent 1px, transparent 34px), repeating-linear-gradient(90deg, rgba(168,85,247,0.03) 0px, rgba(168,85,247,0.03) 1px, transparent 1px, transparent 34px);"></div>
+
+            </div>
+          </div>
+
+          <!-- Project info below frame -->
+          <div class="mt-8 flex flex-col md:flex-row md:items-start gap-8">
+
+            <!-- Left: title + desc -->
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="mono text-slate-500 text-xs">01</span>
+                <span class="w-8 h-px bg-slate-700"></span>
+                <span class="mono text-purple-400 text-xs">Vanilla JS · Supabase · PWA · Capacitor</span>
+              </div>
+              <h3 class="text-3xl font-bold text-white mb-3 group-hover:text-gradient transition-all duration-300">Sudoku Daily</h3>
+              <p class="text-slate-400 leading-relaxed text-sm">
+                เกม Sudoku ที่ออก puzzle ใหม่ทุกวัน — เล่นในเบราว์เซอร์ได้เลย ไม่ต้อง install
+                รองรับ offline ผ่าน PWA และ export เป็น Android/iOS ด้วย Capacitor
+                มี leaderboard global เก็บ score ผ่าน Supabase
+              </p>
+            </div>
+
+            <!-- Right: tags + link -->
+            <div class="flex flex-col items-start md:items-end gap-4 shrink-0">
+              <div class="flex flex-wrap gap-2">
+                <span class="mono text-xs px-3 py-1 rounded border border-purple-500/30 text-purple-400">Daily Puzzle</span>
+                <span class="mono text-xs px-3 py-1 rounded border border-blue-500/30 text-blue-400">Supabase</span>
+                <span class="mono text-xs px-3 py-1 rounded border border-green-500/30 text-green-400">PWA</span>
+                <span class="mono text-xs px-3 py-1 rounded border border-slate-600 text-slate-400">Capacitor</span>
+              </div>
+              <div class="flex items-center gap-4 text-xs mono text-slate-500">
+                <span class="flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                  Live
+                </span>
+                <a href="https://github.com/SirisakUnknowss/mini-games" target="_blank" class="hover:text-white transition-colors">GitHub ↗</a>
               </div>
             </div>
-          </div>
-          <div class="absolute top-6 right-6 mono text-slate-600 text-6xl font-bold select-none">01</div>
-        </div>
 
-        <!-- 2 คอลัมน์ ไม่เท่ากัน — 60/40 -->
-        <div class="grid grid-cols-5 gap-6 mb-6">
-          <!-- Project 2 — ใหญ่ (3/5) -->
-          <div class="col-span-5 md:col-span-3 group relative rounded-2xl overflow-hidden cursor-pointer" style="height: 300px;">
-            <img src="img/project_dashboard.png" alt="DataSight Dashboard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-7 transform transition-transform duration-300 group-hover:-translate-y-1">
-              <p class="mono text-blue-400 text-xs tracking-widest mb-1">02 — Vue.js · Python</p>
-              <h3 class="text-xl font-bold text-white mb-1">DataSight Dashboard</h3>
-              <p class="text-slate-400 text-xs leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Analytics platform สำหรับ visualize ข้อมูลธุรกิจแบบ real-time</p>
-            </div>
-            <div class="absolute top-5 right-5 mono text-slate-700 text-5xl font-bold select-none">02</div>
           </div>
+        </a>
 
-          <!-- Project 3 — เล็ก (2/5) -->
-          <div class="col-span-5 md:col-span-2 group relative rounded-2xl overflow-hidden cursor-pointer" style="height: 300px;">
-            <img src="img/project_mobile_app.png" alt="SecureGuard Mobile" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-300 group-hover:-translate-y-1">
-              <p class="mono text-green-400 text-xs tracking-widest mb-1">03 — Android · iOS</p>
-              <h3 class="text-lg font-bold text-white mb-1">SecureGuard Mobile</h3>
-              <p class="text-slate-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Mobile security สำหรับ privacy monitoring</p>
-            </div>
-            <div class="absolute top-5 right-4 mono text-slate-700 text-5xl font-bold select-none">03</div>
-          </div>
-        </div>
-
-        <!-- 3 คอลัมน์ สม่ำเสมอ -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <!-- Project 4 -->
-          <div class="group relative rounded-2xl overflow-hidden cursor-pointer" style="height: 260px;">
-            <img src="img/project_webgl.png" alt="Cyber Drift" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-5">
-              <p class="mono text-pink-400 text-xs mb-1">04 — WebGL · Three.js</p>
-              <h3 class="text-base font-bold text-white">Cyber Drift</h3>
-              <p class="text-slate-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">3D racing game ที่รันใน browser ล้วน ๆ</p>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="group relative rounded-2xl overflow-hidden cursor-pointer" style="height: 260px;">
-            <img src="img/project_mobile_game.png" alt="NFT Legends" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-5">
-              <p class="mono text-purple-400 text-xs mb-1">05 — Unity · Blockchain</p>
-              <h3 class="text-base font-bold text-white">NFT Legends</h3>
-              <p class="text-slate-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">RPG mobile game + ซื้อขาย asset ด้วย NFT</p>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="group relative rounded-2xl overflow-hidden cursor-pointer" style="height: 260px;">
-            <img src="img/project_script.png" alt="AutoSec Script" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-5">
-              <p class="mono text-red-400 text-xs mb-1">06 — Python · Security</p>
-              <h3 class="text-base font-bold text-white">AutoSec Script</h3>
-              <p class="text-slate-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Auto scan หาช่องโหว่ใน mobile app</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 7 — horizontal layout, text ซ้ายรูปขวา -->
-        <div class="group flex flex-col md:flex-row rounded-2xl overflow-hidden border border-slate-800/60 hover:border-purple-500/30 transition-colors duration-300 cursor-pointer">
-          <div class="md:w-2/5 relative overflow-hidden" style="min-height: 240px;">
-            <img src="img/project_payment.png" alt="ChainPay Gateway" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black/30 md:block hidden"></div>
-          </div>
-          <div class="md:w-3/5 p-8 bg-slate-900/60 flex flex-col justify-center">
-            <p class="mono text-amber-400 text-xs tracking-widest mb-3">07 — FinTech · Blockchain</p>
-            <h3 class="text-2xl font-bold text-white mb-3">ChainPay Gateway</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">Payment gateway ที่เชื่อม fiat กับ crypto ไว้ด้วยกัน รองรับ transaction หลายสกุลและยืนยัน on-chain</p>
-            <div class="flex items-center gap-2">
-              <span class="mono text-xs px-3 py-1 rounded border border-amber-500/30 text-amber-400">FinTech</span>
-              <span class="mono text-xs px-3 py-1 rounded border border-slate-600 text-slate-400">Blockchain</span>
-            </div>
-          </div>
+        <!-- More coming soon -->
+        <div class="mt-16 pt-10 border-t border-slate-800/50">
+          <p class="mono text-slate-600 text-xs tracking-widest text-center">MORE PROJECTS COMING SOON</p>
         </div>
 
       </div>
