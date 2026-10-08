@@ -130,7 +130,7 @@ document.querySelector('#contact-form').addEventListener('submit', async event =
   } finally {
     clearTimeout(timeout);
     button.disabled = false;
-    button.innerHTML = 'Send message <span aria-hidden="true">↗</span>';
+    button.textContent = 'Send message';
   }
 });
 

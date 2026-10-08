@@ -792,3 +792,18 @@ footer .brand img {
     transition:none!important
   }
 }
+
+/* Chevron after text links */
+.project-meta a span,.work-more span {
+  display:inline-block;
+  margin-left:3px;
+  font-size:1.25em;
+  line-height:1;
+  transition:transform .2s
+}
+.project-meta a:hover span,.work-more:hover span {
+  transform:translateX(3px)
+}
+.back-top svg {
+  display:block
+}
