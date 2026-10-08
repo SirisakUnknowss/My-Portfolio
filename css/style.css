@@ -807,3 +807,26 @@ footer .brand img {
 .back-top svg {
   display:block
 }
+
+/* StockTick: LINE OA QR code in place of a screenshot */
+.shot-qr {
+  height:330px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:#fffdf9
+}
+.shot-qr img {
+  width:190px;
+  height:190px;
+  object-fit:contain;
+  border-radius:8px
+}
+.shot-qr span {
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--ink)
+}
